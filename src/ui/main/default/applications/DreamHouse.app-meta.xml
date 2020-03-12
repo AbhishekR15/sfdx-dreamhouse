@@ -4,7 +4,7 @@
     <description>DreamHouse helps you connect with your Customers in a whole new way.</description>
     <formFactors>Large</formFactors>
     <label>DreamHouse</label>
-    <tab>Property__c</tab>
-    <tab>Broker__c</tab>
-    <tab>Property_Explorer</tab>
+    <tabs>Property__c</tabs>
+    <tabs>Broker__c</tabs>
+    <tabs>Property_Explorer</tabs>
 </CustomApplication>
