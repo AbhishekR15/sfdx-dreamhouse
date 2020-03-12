@@ -55,7 +55,7 @@ node {
         
           stage('Push To Test Org') {
               if (isUnix()) {
-                    rc = sh returnStatus: true, script: "\"${toolbelt}\" force:source:push --targetusername ${SFDC_USERNAME}"
+                   rc = sh returnStatus: true, script: "${toolbelt} force:source:push --targetusername ${SFDC_USERNAME}"
               }else{
                   rc = bat returnStatus: true, script: "\"${toolbelt}\" force:source:push --targetusername ${SFDC_USERNAME}"
               }
@@ -76,6 +76,33 @@ node {
                      if (rc != 0) {
                     error 'apex test run failed'
                 }
+            }
+        }
+        
+       
+        stage('Generate a new password for the scrach org') {
+            if (isUnix())
+            {
+            rc = command "${toolbelt} force:user:password:generate --targetusername"
+            } else {
+            rc = command "\"${toolbelt}\" force:user:password:generate --targetusername"
+            }
+          
+            if (rc != 0) {
+                error 'Salesforce test scratch org display failed.'
+            }
+        }
+        
+      stage('Open Test Scratch Org') {
+            if (isUnix())
+            {
+            rc = command "${toolbelt} force:org:open --targetusername"
+            } else {
+            rc = command "\"${toolbelt}\" force:org:open --targetusername"
+            }
+          
+            if (rc != 0) {
+                error 'Salesforce test scratch org open failed.'
             }
         }
 
