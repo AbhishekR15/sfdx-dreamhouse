@@ -83,9 +83,9 @@ node {
         stage('Generate a new password for the scrach org') {
             if (isUnix())
             {
-            rc = command "${toolbelt} force:user:password:generate --targetusername"
+            rc = command "${toolbelt} force:user:password:generate --targetusername HubdOrg"
             } else {
-            rc = command "\"${toolbelt}\" force:user:password:generate --targetusername"
+            rc = command "\"${toolbelt}\" force:user:password:generate --targetusername HubdOrg"
             }
           
             if (rc != 0) {
@@ -96,9 +96,9 @@ node {
       stage('Open Test Scratch Org') {
             if (isUnix())
             {
-            rc = command "${toolbelt} force:org:open --targetusername"
+            rc = command "${toolbelt} force:org:open --targetusername HubdOrg"
             } else {
-            rc = command "\"${toolbelt}\" force:org:open --targetusername"
+            rc = command "\"${toolbelt}\" force:org:open --targetusername HubdOrg"
             }
           
             if (rc != 0) {
