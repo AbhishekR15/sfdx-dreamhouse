@@ -2,10 +2,17 @@
   "packageDirectories": [
     {
       "path": "src/common",
-      "default": true
+      "default": true,
+      "package": "Jenkins",
+      "versionName": "Winter '19",
+      "versionNumber": "1.0.0.NEXT"
     },
     {
-      "path": "src/ui"
+      "path": "src/ui",
+      "package": "jenkins",
+      "versionName": "ver 0.1",
+      "versionNumber": "0.1.0.NEXT",
+      "default": false
     }
   ],
   "namespace": "",
