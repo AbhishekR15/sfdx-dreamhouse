@@ -2,12 +2,23 @@
   "packageDirectories": [
     {
       "path": "src/common",
-      "default": true
+      "default": true,
+      "package": "Jenkins",
+      "versionName": "Winter '19",
+      "versionNumber": "1.0.0.NEXT"
     },
     {
-      "path": "src/ui"
+      "path": "src/ui",
+      "package": "jenkins",
+      "versionName": "ver 0.1",
+      "versionNumber": "0.1.0.NEXT",
+      "default": false
     }
   ],
   "namespace": "",
-  "sfdcLoginUrl": "https://login.salesforce.com"
+  "sfdcLoginUrl": "https://login.salesforce.com",
+  "sourceApiVersion": "46.0",
+    "packageAliases": {
+        "Jenkins": "0Ho2w000000CaWgCAK",
+        "Jenkins@1.0.0-1": "04t0N000001E1ksQAC"
 }
