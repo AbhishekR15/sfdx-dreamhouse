@@ -18,7 +18,7 @@
   "namespace": "",
   "sfdcLoginUrl": "https://login.salesforce.com",
   "sourceApiVersion": "46.0",
-    "packageAliases": {
-        "Jenkins": "0Ho2w000000CaWgCAK",
+  "packageAliases": {
+        "Jenkins": "0Ho2w000000CaXjCAK",
         "Jenkins@1.0.0-1": "04t0N000001E1ksQAC"
 }
