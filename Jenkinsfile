@@ -8,7 +8,7 @@ node {
     def SF_USERNAME=env.SF_USERNAME
     def SERVER_KEY_CREDENTALS_ID=env.SERVER_KEY_CREDENTALS_ID
     def TEST_LEVEL='RunLocalTests'
-    def PACKAGE_NAME='0Ho2w000000CaWgCAK'
+    def PACKAGE_NAME='0Ho2w000000CaXjCAK'
     def PACKAGE_VERSION
     def SF_INSTANCE_URL = env.SF_INSTANCE_URL ?: "https://login.salesforce.com"
     
