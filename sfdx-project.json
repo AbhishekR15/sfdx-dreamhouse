@@ -1,5 +1,5 @@
 {
-  "defaultdevhubusername": "HubdOrg"	
+  "defaultdevhubusername": "HubdOrg",	
   "packageDirectories": [
     {
       "path": "src/common",
