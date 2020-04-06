@@ -83,9 +83,9 @@ node {
         stage('Generate a new password for the scrach org') {
             if (isUnix())
             {
-            rc = command "${toolbelt} force:user:password:generate --targetusername"
+            rc = command "${toolbelt} force:user:password:generate"
             } else {
-            rc = command "\"${toolbelt}\" force:user:password:generate --targetusername"
+            rc = command "\"${toolbelt}\" force:user:password:generate"
             }
           
             if (rc != 0) {
