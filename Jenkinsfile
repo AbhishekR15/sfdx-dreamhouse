@@ -31,9 +31,9 @@ node {
 
             // need to pull out assigned username
               if (isUnix()) {
-                rmsg = sh returnStdout: true, script: "${toolbelt} force:org:create --definitionfile config/enterprise-scratch-def.json --json --setdefaultusername --durationdays 1"
+                rmsg = sh returnStdout: true, script: "${toolbelt} force:org:create --definitionfile config/enterprise-scratch-def.json --json --setalias ciorg --wait 10 --durationdays 1"
               }else{
-                   rmsg = bat returnStdout: true, script: "\"${toolbelt}\" force:org:create --definitionfile config/project-scratch-def.json --json --setdefaultusername --durationdays 1"
+                   rmsg = bat returnStdout: true, script: "\"${toolbelt}\" force:org:create --definitionfile config/project-scratch-def.json --setalias ciorg --wait 10 --durationdays 1"
               }
             printf rmsg
             println('Hello from a Job DSL script!')
@@ -96,9 +96,9 @@ node {
       stage('Open Test Scratch Org') {
             if (isUnix())
             {
-            rc = command "${toolbelt} force:org:open -u ${SFDC_USERNAME}"
+            rc = command "${toolbelt} force:org:open -u ciorg"
             } else {
-            rc = command "\"${toolbelt}\" force:org:open -u ${SFDC_USERNAME}"
+            rc = command "\"${toolbelt}\" force:org:open -u ciorg"
             }
           
             if (rc != 0) {
